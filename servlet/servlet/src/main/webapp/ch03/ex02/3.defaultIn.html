@@ -1,0 +1,18 @@
+<meta charset='utf-8'/>
+<form action='3.defaultOut.jsp'>
+	text: <input type='text' name='text'/><br> <!-- 기본값: emptyString -->
+	number: <input type='number' name='number'/><br> <!-- 기본값: emptyString -->
+	date: <input type='date' name='date'/><br> <!-- 기본값: emptyString -->
+	checkbox: <input type='checkbox' name='checkbox'/><br> <!-- 기본값: null -->
+	radio: <input type='radio' name='radio'/><br> <!-- 기본값: null -->
+	<hr>
+	text: <input type='text' name='text2' value='hello'/><br> <!-- parameterName은 유일해야하므로 2를 붙이고 기본값을 지정하려면 value로 지정 -->
+	number: <input type='number' name='number2' value='32'/><br> 
+	date: <input type='date' name='date2' value='2025-05-12'/><br> 
+	checkbox: <input type='checkbox' name='checkbox2' value='apple' checked/><br> 
+	radio: <input type='radio' name='radio2' value='grape' checked/><br> 
+	<input type='submit'/>
+	<!-- value로 입력한값이 자동으로 입력되어있다. -->
+	<!-- checkbox와 radio는 여전히 설정한 기본값이 없다. -->
+	<!-- checkbox와 radio는 마우스클릭으로 체크하기때문에 checked라는 attribute가 있어야함. -->
+</form>

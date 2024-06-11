@@ -1,0 +1,18 @@
+http://localhost(:80)/servlet/ch01/get/add
+포트번호 80 생략되었음()
+tomcat에 deploy했을때(project 만들었을때) project이름으로 모듈이 생성되고
+/servlet 이라는 path가 생성된다.
+domain.name -> domainName(문자주소)
+127.0.0.1 -> domainName(IP주소)
+
+Header ( 크롬에서 request 자동으로 담는데이터, 
+업무에서 필요하지않는 데이터 메타데이터가 있는곳)
+
+javaScript에서 발생하는 에러는 개발자도구(F12) Console탭에서 확인할 수 있다.
+response에 대한 오류는 Network탭에서 확인해본다.
+
+applet : 브라우저에 JVM엔진을 설치해서 애니메이션 구동을 할 수 있다.
+플래시 : 애니메이션 java를 배우지않고 애
+유행에서 밀렸기때문에 java로 표현하지않고 HTML로 표현한다.
+
+tomcat이 method

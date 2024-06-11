@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.my</groupId>
+  <artifactId>spring.core</artifactId>
+  <version>1.0</version>
+  
+  <!-- 
+  	Ioc, DI, AOP는 POJO(Plain Old Java Object: 상속받지 않은 순수한 객체를 말한다.)를 위한것이다.
+  	enterprise app - 대규모의 앱(ex:병원)
+  	과일가게, 병원, 쇼핑몰의 공통된 기술로직: http 통신을 해야한다. -> 이를위해 http servlet을 상속받음.
+  	spring에서는 http servlet을 상속받지 않아도 된다.
+  -->
+  
+  <properties>
+  	  <spring.ver>5.3.32</spring.ver>
+  </properties>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>${spring.ver}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.projectlombok</groupId>
+  		<artifactId>lombok</artifactId>
+  		<version>1.18.24</version>
+  		<scope>provided</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.aspectj</groupId>
+  		<artifactId>aspectjweaver</artifactId>
+  		<version>1.9.9.1</version>
+  	</dependency>
+  </dependencies>
+</project>

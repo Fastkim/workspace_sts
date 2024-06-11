@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+	https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.my</groupId>
+  <artifactId>spring.core2</artifactId>
+  <version>1.0</version>
+  
+  <properties> <!-- 현재 문서에서 쓸 속성(properties)을 설정-->
+  	<spring.ver>5.3.32</spring.ver> <!-- 스프링 버전명시, 이름은 자유롭게 설정가능-->
+  </properties>
+  
+  <!-- 
+  		Maven이 libarary의 버전도 관리해주므로
+  		A library에 필요한 B,C,D library의 버전을 맞춰서 준비해준다.
+  		그러므로 개발자는 A Library만 챙기면된다.
+  		Maven이 관리하고 있는 Library 저장소: MVN repository
+  		URL: https://mvnrepository.com/
+  		MVN repository의 각각의 Library는 group_id, artifactId, version과
+  		같은 metaDate로 구분된다.
+   -->
+  <dependencies>
+  	<dependency> <!-- 필요한 dependency를 n개를 기입하면된다. -->
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>${spring.ver}</version> 
+  		<!-- 
+  			중복되는 버젼은 properties에서 지정하고 el로 표현하면 
+  			중복을 피할수 있다.
+  		-->
+  	</dependency>
+  	<dependency>
+  		<groupId>org.projectlombok</groupId>
+  		<artifactId>lombok</artifactId>
+  		<version>1.18.24</version>
+  		<scope>provided</scope> 
+  		<!--
+  			scope: 이 Library가 언제까지 사용할것이냐?
+  			provided: 내 앱에는 포함하지 않고 외부에서 제공된것을 사용
+  			lombok은 개발할때만(코드생성) 필요하고 고객에게 줄때는
+  			자바 소스가 아닌 클래스를 주는것이다.
+  			대부분은 scope를 따로주지않는다.
+  		 -->
+  	</dependency>
+  	<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjweaver</artifactId>
+		<version>1.9.9.1</version>  	
+  	</dependency>
+  </dependencies>
+</project>
