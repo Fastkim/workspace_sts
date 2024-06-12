@@ -20,4 +20,6 @@ public class UserController {
 	}
 	// handler가 user를 바라보는 관점: command, model
 	// request url이 ch02/ex03/user로 동일하면 GetMapping/PostMapping으로 구분한다.
+	// 파라미터가 문자,숫자,날짜인경우 command가 안된다.
+	// User는 user객체로 맵핑
 }

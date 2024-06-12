@@ -11,7 +11,7 @@ import spring.core.ch01.ex02.Shooter;
 @Configuration
 @Import({Config.class, Config.class})
 public class AppConfig {
-	@Autowired private Gun pistol; // 자동으로 연결하다 : Autowired
+	@Autowired private Gun pistol; // 자동으로 연결하다: Autowired
 	@Autowired private Gun rifle; // container중에 Gun타입인 객체를 찾아서 조회한다. 문제) Gun타입의 bean이 2개이상이다.
 	// 1차는 타입으로 검색, 2차는 bean의 ID와 필드네임을 비교 검색
 	

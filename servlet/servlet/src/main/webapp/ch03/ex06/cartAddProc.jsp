@@ -14,3 +14,9 @@
 	}
 %>
 <c:redirect url='cartOut.jsp'/>
+
+<!-- 
+	forward: 같은서버에 있어야함, client가 관여안함 
+	redirect: 다른서버에 있어도 됨, client가 관여함.
+-->
+

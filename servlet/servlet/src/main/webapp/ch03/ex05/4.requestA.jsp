@@ -3,4 +3,4 @@
 <%
 	request.setAttribute("user", new User("최한석", 12));
 %>
-<jsp:forward page='4.requestB.jsp'/>
+<jsp:forward page='4.requestB.jsp'/> <!-- 4.requestB.jsp를 현 페[이지에 포함한다. -->
