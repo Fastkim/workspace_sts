@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
-@Controller("ch03.ex03")
+@Controller("ch03.ex02")
 @RequestMapping("ch03/ex02/user")
 public class UserController {	
 	@Value("${attachPath}") private String attachPath; // property injection
