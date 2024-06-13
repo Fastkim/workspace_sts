@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+	'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace='com.my.spring.web.ch04.dao.map.TodayMap'>
+	<select id='selectToday' resultType='java.time.LocalDate'> 
+		select current_date from dual
+	</select>
+</mapper>
+
+<!-- 
+resultType="int"면 integer이 결과
+"_int"면 int가 결과 
+-->

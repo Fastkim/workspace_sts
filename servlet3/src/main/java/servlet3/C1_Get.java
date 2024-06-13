@@ -23,7 +23,7 @@ public class C1_Get extends HttpServlet { // HttpServlet: Http에 관련된 알�
 		//url을 알려주고 encoding을 알려준다. http text는 physical 하게는 text이지만 logical 하게는 content이다.
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
-		out.println("<h2>GET</h2>")
+		out.println("<h2>GET</h2>");
 	}
 	
 }

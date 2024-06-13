@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Controller("ch02.ex02")
+@Controller("ch02.ex02") //requestMaping 없이 메서드마다 url설정
 public class UserController {
 	@GetMapping("ch02/ex02/userIn") // CRUD중에 R(유저입장)
 	public String userIn() { //userIn handler
