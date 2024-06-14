@@ -5,10 +5,10 @@ import java.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 
+@Getter
 @AllArgsConstructor
-@Data
 public class User { // 기본생성자가 없는 상태
 	private String username;
 	private int age;

@@ -3,9 +3,10 @@
 	'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
 <mapper namespace='com.my.spring.web.ch04.dao.map.EmployeeMap'>
 	<select id='selectEmployee' resultType='Employee'>
-		select employee_id employeeId, last_name lastName, hire_date hireDate
+	<!-- properties에서 snake_Case -> camel_case로 변환하는 속성을 기입했으므로 컬럼별명을 지정해주지 않아도 된다. -->
+		select employee_id, last_name, hire_date 
 		from employees
-		where employee_id = #{employeeId}
+		where employee_id = #{employee.employeeId}
 	</select>
 </mapper>
 <!-- 
