@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+	'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace='com.my.spring.web.ch05.ex02.dao.map.UserMap'>
+	<select id='selectUsers' resultType='user'>
+	<!-- properties에서 snake_Case -> camel_case로 변환하는 속성을 기입했으므로 컬럼별명을 지정해주지 않아도 된다. -->
+		select user_id, user_name, birthday
+		from users
+	</select>
+	
+	<insert id='insertUser'> <!-- id는 interface mapper에 연동 -->
+		insert into users
+		values(#{userId}, #{username}, #{birthday})
+	</insert>
+	
+	<update id='updateUser'>
+		update users
+		set user_name = #{username}, birthday=#{birthday}
+		where user_id = #{userId}
+	</update>
+	
+	<delete id='deleteUser'>
+		delete users
+		where user_id = #{userId}
+	</delete>
+</mapper>
+<!-- 
+	resultType: 매핑될 클래스 명을 작성하는것 
+	resultMap: 사용자가 원하는 POJO클래스(VO) 매핑
+-->

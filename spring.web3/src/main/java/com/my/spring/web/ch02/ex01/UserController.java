@@ -21,12 +21,12 @@ public class UserController {
 	@GetMapping("21")
 	public String handler21(Model model) {
 		model.addAttribute("user", new User("한아름", 21));
-		return "ch02/ex01/user"; // 2개의 model이 1개의 view를 공유(재사용)할수 있다.
+		return "ch02/ex01/user"; // 2개의 model이 1개의 view를 공유(재사용)할 수 있다.
 	}
 	
 	@GetMapping("22")
 	public String handler22() {
-		return "ch02/ex01/user"; // 해당 jsp에 el을 썻기때문에 /가 나옴.
+		return "ch02/ex01/user"; // 해당 jsp에 el을 썻기때문에 /만 출력됨.
 	}
 	
 	@GetMapping("31")
