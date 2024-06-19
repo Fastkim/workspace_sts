@@ -1,6 +1,5 @@
 package com.my.hr.dao.map;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import com.my.hr.domain.Laborer;

@@ -46,5 +46,4 @@ public class LaborerController {
 	public void delLaborer(@PathVariable int laborerId) {
 		laborerService.delLaborer(laborerId);
 	}
-	
 }

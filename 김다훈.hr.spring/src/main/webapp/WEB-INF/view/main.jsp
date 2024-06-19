@@ -5,7 +5,7 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
 function isVal(field) {
-    let isGood = false // boolean 초기화 기본값 : false , String : emptyString , Number : 0 , flag variable
+    let isGood = false
     let errMsg
 
     if(!field.length) errMsg = '노동자를 선택하세요.'
@@ -19,12 +19,11 @@ function isVal(field) {
         $('#modalBtn').hide()
         $('#modal').modal('show')
     }
-
     return isGood
 }
 
 function listLaborers() {
-	$('input').not(':radio').val('') // radio가 아닌걸 찾아낸후 emptyString 처리해서 처리해준다.
+	$('input').not(':radio').val('')
     $('#laborers').empty()
     
 	if('#laborers' != null) {
@@ -42,7 +41,6 @@ function listLaborers() {
 		                </tr>`
 					)
 				})
-				
 				$('#laborers').empty()
 				$('#laborers').append(laborerArr.join(''))
 			}
@@ -50,7 +48,7 @@ function listLaborers() {
 	} else $('#laborers').append('<tr><td colspan="4" class="text-center">노동자가 없습니다.</td></tr>')
 }
 
-function init() { // 페이지가 시작하자마자 하는 작업을 의미
+function init() {
     listLaborers()
     
     $('#addLaborerBtn').click(() => {
@@ -66,7 +64,6 @@ function init() { // 페이지가 시작하자마자 하는 작업을 의미
     	})
     })
 
-    // 노동자 수정
     $('#fixLaborerBtn').click(() => {
     	$.ajax({
     		url: 'laborer/fix',
@@ -81,7 +78,6 @@ function init() { // 페이지가 시작하자마자 하는 작업을 의미
     	})
     })
 
-    // 노동자 삭제
     $('#delLaborerBtn').click(() => {
          if(isVal($('#laborerId:checked'))) {
              $('#modalMsg').text('노동자를 삭제하시겠습니까?')
@@ -102,21 +98,14 @@ function init() { // 페이지가 시작하자마자 하는 작업을 의미
    	})
 }
 
-$(init)  // call
+$(init)
 </script>
-<style>
-#hireDate::before {
-    content: attr(placeholder);
-    width: 100%;
-}
 
+<style>
 #hireDate:focus::before, #hireDate:valid::before {
     display: none;
 }
 </style>
-
-
-
 
 <div class='container'>
             <div class='row mb-5'>
@@ -155,7 +144,6 @@ $(init)  // call
                                         <span class='label d-none d-md-inline'>&nbsp;수정</span>
                                     </button>
                                     <button type='button' class='btn btn-danger col-4' id='delLaborerBtn'>
-                                        <!-- data-bs-toggle='modal' data-bs-target='#delLaborerModal'> -->
                                 <i class='bi bi-x-circle'></i>
                                 <span class='label d-none d-md-inline'>&nbsp;삭제</span>
                             </button>
@@ -185,7 +173,6 @@ $(init)  // call
                 <button type='button' class='btn-close' data-bs-dismiss='modal'></button>
             </div>
             <div class='modal-body'>
-                <!--<p>노동자를 삭제하시겠습니까?</p>-->
                 <p id='modalMsg'></p>
             </div>
             <div class='modal-footer' id='modalBtn'>
